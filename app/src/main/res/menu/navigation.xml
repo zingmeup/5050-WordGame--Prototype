@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_hourly"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Hourly" />
+
+    <item
+        android:id="@+id/navigation_daily"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Todays" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Me" />
+
+</menu>

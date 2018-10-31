@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">5050</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="API_dailyword">http://5050.zingme.cf/client/getDailyWord.php</string>
+    <string name="API_checkDailyword">http://5050.zingme.cf/client/checkWord.php?word=</string>
+</resources>
