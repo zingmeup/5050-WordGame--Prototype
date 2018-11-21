@@ -2,6 +2,7 @@ package com.example.deepak.a5050;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -165,5 +166,29 @@ public class MainActivity extends AppCompatActivity {
 
     public ProgressBar getSplashProgress() {
         return splashProgress;
+    }
+
+    public void startTimer() {
+        final int maxTime=300;
+        final int[] t = {maxTime};
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                t[0]--;
+                updateTimerView(t);
+                Log.e("Timer", "Timer "+t[0]);
+                if(t[0] >0) {
+                    handler.postDelayed(this, 1000);
+                }else if (t[0] ==0){
+                    inputDailyWordView.setVisibility(View.GONE);
+                }
+            }
+        }, 1000);
+    }
+    public void updateTimerView(int[] t){
+        int mins=t[0]/60;
+        int secs=t[0]%60;
+        splashTime.setText(String.valueOf(mins+":"+secs));
     }
 }

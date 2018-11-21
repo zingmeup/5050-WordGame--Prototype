@@ -71,6 +71,7 @@ public class NetworkOperations {
                                     activity.getScoreCountView().setText("0");
                                     activity.getWordCountView().setText("0");
                                     activity.getDailyWordView().setText(DailyWord.getDailyWord().getWord());
+                                    activity.startTimer();
                                 }
                             });
                             editor.putString("wordofTheDay", DailyWord.getDailyWord().getWord());
